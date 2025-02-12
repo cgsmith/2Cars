@@ -1,0 +1,140 @@
+body {
+  font-family: sans-serif;
+  background-color: #1a1b26;
+}
+
+/**
+ * Utility classes ************************************************************
+ */
+.absolute {
+  position: absolute;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+
+/**
+ * Game layout ****************************************************************
+ */
+.game-container {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #1a1b26;
+}
+
+
+/**
+ * Common positioning *********************************************************
+ */
+.score-container,
+.pause-button {
+  position: absolute;
+  top: 20px;
+  z-index: 6;
+  color: white;
+  font-size: 24px;
+}
+
+.score-container {
+  right: 20px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.pause-button {
+  left: 20px;
+  z-index: 999;
+  padding: 8px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+}
+
+
+/**
+ * Overlay styles *************************************************************
+ */
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.game-over {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 9999;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.final-scores {
+  margin: 15px 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+
+/**
+ * Button styles **************************************************************
+ */
+.restart-button {
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #f23a63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/**
+ * Animation classes **********************************************************
+ */
+.car, g {
+  transition: transform 0.2s ease-out;
+}
+
+.car {
+  transition: x 0.2s ease-out, cx 0.2s ease-out, transform 0.2s ease-out;
+}
+
+g {
+  transform-origin: center;
+}
+
+
+/**
+ * Touch controls *************************************************************
+ */
+.touch-left, .touch-right {
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.touch-left { left: 0; }
+.touch-right { right: 0; }
