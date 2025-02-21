@@ -159,7 +159,7 @@
       if (obs.y >= gameHeight) {
         if (obs.type === 'circle') {
           updateBestScore();
-          gameOver = true;
+          return false;
         }
         return false;
       }
